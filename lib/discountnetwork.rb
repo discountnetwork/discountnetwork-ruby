@@ -1,4 +1,5 @@
 require "discountnetwork/version"
+require "discountnetwork/configuration"
 
-module Discountnetwork
+module DiscountNetwork
 end

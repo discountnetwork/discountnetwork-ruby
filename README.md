@@ -21,6 +21,19 @@ And then execute:
 $ bundle
 ```
 
+## Configure
+
+Once you have your API keys from Discount Network, then you can add an initializer
+to set up your API keys
+
+```ruby
+DiscountNetwork.configure do |config|
+  config.api_key = "YOUR_API_KEY"
+
+  # Default configurations
+  # config.api_host = "https://api.discountnetwork.io/v1"
+end
+```
 
 ## Development
 
