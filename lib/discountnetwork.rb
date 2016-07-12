@@ -1,6 +1,5 @@
 require "discountnetwork/version"
-require "discountnetwork/configuration"
-require "discountnetwork/response"
+require "discountnetwork/client"
 
 module DiscountNetwork
 end
