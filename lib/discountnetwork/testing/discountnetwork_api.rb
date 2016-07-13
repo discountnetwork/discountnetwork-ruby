@@ -1,4 +1,4 @@
-module FakeDiscountNetworkApi
+module DiscountNetworkApi
   def stub_api_response(method, end_point, filename:, status: 200, data: nil)
     stub_request(method, api_end_point(end_point)).
       with(api_request_headers(data: data)).
@@ -26,7 +26,10 @@ module FakeDiscountNetworkApi
   end
 
   def fixture_file(filename)
-    File.read("./spec/fixtures/#{filename}.json")
+    file_name = [filename, "json"].join(".")
+    file_path = ["../../../../", "spec", "fixtures", file_name].join("/")
+
+    File.read(File.expand_path(file_path, __FILE__))
   end
 
   def api_request_headers(data:)

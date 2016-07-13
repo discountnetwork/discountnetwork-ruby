@@ -102,6 +102,18 @@ bin/console
 DiscountNetwork::Session.create(name: "username", password: "password")
 ```
 
+## Testing
+
+### RSpec
+
+This gem provides an easier way to test Discount Network API Responses. Simply
+include the following line in your `spec_helper` and you should have access to
+all of the test helpers.
+
+```ruby
+require "discountnetwork/rspec"
+```
+
 ## Contributing
 
 First, thank you for contributing! We love pull requests from everyone. By
