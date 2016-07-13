@@ -5,6 +5,16 @@ module FakeDiscountNetworkApi
       to_return(response_with(filename: filename, status: status))
   end
 
+  def stub_session_create_api(login_params)
+    stub_api_response(
+      :post,
+      "sessions",
+      data: { login: login_params },
+      filename: "session_created",
+      status: 200
+    )
+  end
+
   private
 
   def api_end_point(end_point)

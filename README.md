@@ -35,6 +35,24 @@ DiscountNetwork.configure do |config|
 end
 ```
 
+## Usages
+
+### Session
+
+Session API allow you to authenticate a subscriber, create a new session or
+destroying an existing session.
+
+#### Create a new session
+
+Creating a new session will verify the subscriber and return the `subscriber`
+object with subscription details.
+
+```ruby
+DiscountNetwork::Session.create(
+  name: "username", password: "secret_password"
+)
+```
+
 ## Development
 
 We are following Sandi Metz's Rules for this gem, you can read the

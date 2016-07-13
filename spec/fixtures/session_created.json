@@ -1,0 +1,31 @@
+{
+  "user": {
+    "first_name": "Mr User",
+    "middle_name": "",
+    "last_name": "Name",
+    "spouse_name": "",
+    "company_name": "Discount Network",
+    "company_abbr": "DN",
+    "package_name": null,
+    "access_id": null,
+    "username": "username",
+    "sex": "male",
+    "address": "Bangkok",
+    "city": "Huai Khwang",
+    "state": "Bangkok",
+    "zip": "10320",
+    "country": "TH",
+    "email": "username@example.com",
+    "phone": "20202020",
+    "status": "Active",
+    "mobile": "10308383730",
+    "office_phone": "",
+    "expiration": null,
+    "created_at": "22 May, 2014",
+    "role": 501,
+    "subscription_status": "active",
+    "name": "Mr User Name",
+    "id": 1,
+    "token": "c8L-tQutgNZ0r-Lw-PQLow"
+  }
+}
