@@ -43,6 +43,47 @@ We are following Sandi Metz's Rules for this gem, you can read the
 file that violates these rules you should fix the violations as part of
 your contribution.
 
+### Setup
+
+* Clone the repository.
+
+```sh
+git clone https://github.com/discountnetwork/discountnetwork-ruby.git
+```
+
+* Setup your environment.
+
+```sh
+bin/setup
+```
+
+* Run the test suite
+
+```sh
+bin/rake
+```
+
+### PlayBox
+
+* Setup API keys.
+
+```sh
+cp .sample.pryrc .pryrc
+vim .pryrc
+```
+
+* Start your console.
+
+```sh
+bin/console
+```
+
+* Start playing with it.
+
+```sh
+DiscountNetwork::Session.create(name: "username", password: "password")
+```
+
 ## Contributing
 
 First, thank you for contributing! We love pull requests from everyone. By
