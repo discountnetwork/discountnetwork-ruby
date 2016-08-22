@@ -1,0 +1,19 @@
+{
+  "search": {
+    "id": 11299,
+    "location": "Bangkok, Thailand",
+    "check_in": "25 August, 2016",
+    "check_out": "28 August, 2016",
+    "adults": 2,
+    "children": 0,
+    "total_rooms": 0,
+    "dmy_check_in": "25/08/2016",
+    "dmy_check_out": "28/08/2016",
+    "total_results": 0,
+    "min_price": null,
+    "last_provider": null,
+    "max_provider": 2,
+    "status": null,
+    "wait_time": 11
+  }
+}

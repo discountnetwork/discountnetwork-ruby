@@ -32,7 +32,11 @@ module DiscountNetwork
     end
 
     def custom_headers
-      { "DN-API-KEY" => DiscountNetwork.configuration.api_key }
+      {
+        "DN-API-KEY" => DiscountNetwork.configuration.api_key,
+        "Authorization" =>
+        "Token token=\"#{DiscountNetwork.configuration.auth_token}\""
+      }
     end
   end
 

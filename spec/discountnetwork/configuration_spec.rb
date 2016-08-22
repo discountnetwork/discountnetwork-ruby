@@ -18,4 +18,13 @@ describe DiscountNetwork::Configuration do
       expect(DiscountNetwork.configuration.api_key).to eq(api_key)
     end
   end
+
+  describe "#auth_token" do
+    it "returns the user authentication token" do
+      auth_token = "user_secret_authentication_token"
+      DiscountNetwork.configure { |config| config.auth_token = auth_token }
+
+      expect(DiscountNetwork.configuration.auth_token).to eq(auth_token)
+    end
+  end
 end

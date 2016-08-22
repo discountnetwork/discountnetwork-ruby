@@ -15,6 +15,16 @@ module DiscountNetworkApi
     )
   end
 
+  def stub_search_create_api(search_params)
+    stub_api_response(
+      :post,
+      "searches",
+      data: { search: search_params},
+      filename: "search_created",
+      status: 200
+    )
+  end
+
   private
 
   def api_end_point(end_point)
