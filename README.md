@@ -53,6 +53,18 @@ DiscountNetwork::Session.create(
 )
 ```
 
+### Destination
+
+#### List destinations
+
+Retrieve the list of destinations based on a search term. This is useful when
+you are planning to show the list of destinations while user start to type
+destination name
+
+```ruby
+DiscountNetwork::Destination.list(term: "bangkok")
+```
+
 ## Development
 
 We are following Sandi Metz's Rules for this gem, you can read the

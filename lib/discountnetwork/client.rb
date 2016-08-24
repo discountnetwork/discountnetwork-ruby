@@ -40,6 +40,10 @@ module DiscountNetwork
     end
   end
 
+  def self.get_resource(end_point, attributes)
+    Client.new(:get, end_point, attributes).execute
+  end
+
   def self.post_resource(end_point, attributes)
     Client.new(:post, end_point, attributes).execute
   end

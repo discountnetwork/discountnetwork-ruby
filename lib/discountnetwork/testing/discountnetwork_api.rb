@@ -25,6 +25,16 @@ module DiscountNetworkApi
     )
   end
 
+  def stub_destination_list_api(term:)
+    stub_api_response(
+      :get,
+      "destinations",
+      data: { term: term },
+      filename: "destinations",
+      status: 200
+    )
+  end
+
   private
 
   def api_end_point(end_point)

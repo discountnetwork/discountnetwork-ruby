@@ -10,6 +10,15 @@ describe DiscountNetwork::Client do
     end
   end
 
+  describe ".get_resource" do
+    it "requests the resource via :get" do
+      stub_discountnetwork_ping_request(:get, request_data)
+      response = DiscountNetwork.get_resource("ping", request_data)
+
+      expect(response.data).to eq("Pong!")
+    end
+  end
+
   def request_data
     { content: "Ping Request" }
   end
