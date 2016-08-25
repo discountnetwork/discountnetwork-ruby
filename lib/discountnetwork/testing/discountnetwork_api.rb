@@ -35,6 +35,15 @@ module DiscountNetworkApi
     )
   end
 
+  def stub_search_find_api(search_id)
+    stub_api_response(
+      :get,
+      ["searches", search_id].join("/"),
+      filename: "search",
+      status: 200
+    )
+  end
+
   private
 
   def api_end_point(end_point)

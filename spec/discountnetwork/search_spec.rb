@@ -12,6 +12,17 @@ describe DiscountNetwork::Search do
     end
   end
 
+  describe ".find" do
+    it "finds the specified search" do
+      search_id = "DN_SEARCH_101"
+      stub_search_find_api(search_id)
+      search = DiscountNetwork::Search.find(search_id)
+
+      expect(search.id).to eq(search_id)
+      expect(search.location).to eq("Bangkok, Thailand")
+    end
+  end
+
   def search_params
     @search_params ||= {
       location_id: "835",

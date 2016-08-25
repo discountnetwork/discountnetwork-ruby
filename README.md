@@ -65,6 +65,34 @@ destination name
 DiscountNetwork::Destination.list(term: "bangkok")
 ```
 
+### Search
+
+#### Create new search
+
+You can create a new search using the API. Please note: It's advisable to wait
+10-15 seconds before trying to retrieve the search results.
+
+```ruby
+DiscountNetwork::Search.create(
+  adults: 2,
+  children: 0,
+  room_numbers: 1
+  location_id: 835,
+  check_in: "25/10/2016",
+  check_out: "28/10/2016",
+  location_name: "Bangkok, Thailand",
+)
+```
+
+#### Retrieve search details
+
+Once, you have created a new search and you have the search id then you can
+retrieve the search details as
+
+```ruby
+DiscountNetwork::Search.find(search_id)
+```
+
 ## Development
 
 We are following Sandi Metz's Rules for this gem, you can read the
