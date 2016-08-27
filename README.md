@@ -93,6 +93,18 @@ retrieve the search details as
 DiscountNetwork::Search.find(search_id)
 ```
 
+### Result
+
+#### Retrieve search results
+
+Retrieve the hotel search results from the Discount Network API.
+
+```ruby
+DiscountNetwork::Result.where(
+  search_id: search_id
+)
+```
+
 ## Development
 
 We are following Sandi Metz's Rules for this gem, you can read the
