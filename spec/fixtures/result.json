@@ -1,0 +1,89 @@
+{
+  "result": {
+    "id": 456789012,
+    "name": "Nasa Vegas Hotel",
+    "description": "Nasa Vegas Hotel is conveniently located in the popular Ratchadaphisek area. The hotel offers a high standard of service and amenities to suit the individual needs of all travelers. Meeting facilities, restaurant are just some of the facilities on offer. Each guestroom is elegantly furnished and equipped with handy amenities. Recuperate from a full day of sightseeing in the comfort of your room or take advantage of the hotel's recreational facilities, including fitness center. No matter what your reasons are for visiting Bangkok, Nasa Vegas Hotel will make you feel instantly at home.",
+    "website": "/hotels/thailand/bangkok/nasa-vegas-hotel-35296",
+    "address": "44 Sukhumvit 71-Ramkhamhaeng Road",
+    "latitude": 13.74298,
+    "longitude": 100.60189,
+    "property_type": null,
+    "stars": 3,
+    "rank": 1,
+    "price": 19,
+    "total_reviews": 14218,
+    "review_score": 71,
+    "image": "http://1.omg.io/wego/image/upload/w_200,h_200,c_fill/v1412203579/hotels/35296/18982289.jpg",
+    "review_text": "Fair",
+    "offer": null,
+    "promo_price": 14.3469,
+    "currency_code": "USD",
+    "check_in": "15:00:00",
+    "check_out": "12:00:00",
+    "postal_code": "10250",
+    "fax": "reservation@nasavegashotel.com",
+    "reservation_phone": "+6627199888",
+    "cancellation_policy": {
+      "table": {}
+    },
+    "videos": [],
+    "images": [
+      "http://0.omg.io/wego/image/upload/w_460,h_460,c_fill/v1428174470/hotels/35296/13560731.jpg",
+      "http://0.omg.io/wego/image/upload/w_460,h_460,c_fill/v1428174557/hotels/35296/5887465.jpg",
+      "http://1.omg.io/wego/image/upload/w_460,h_460,c_fill/v1412203706/hotels/35296/10311481.jpg",
+      "http://0.omg.io/wego/image/upload/w_460,h_460,c_fill/v1412203552/hotels/35296/35681515.jpg",
+      "http://0.omg.io/wego/image/upload/w_460,h_460,c_fill/v1412203552/hotels/35296/35681502.jpg"
+    ],
+    "property_amenities": [
+      "Restaurant",
+      "Massage services",
+      "Meeting rooms",
+      "Playground"
+    ],
+    "room_amenities": [
+      "Bathrobe",
+      "Cable television",
+      "Hairdryer",
+      "Internet access",
+      "Microwave",
+      "Newspaper",
+      "Private pool",
+      "Separate tub and shower"
+    ],
+    "search": {
+      "id": 123456789,
+      "location": null,
+      "check_in": "01 September, 2016",
+      "check_out": "03 September, 2016",
+      "adults": 2,
+      "children": 0,
+      "total_rooms": 0,
+      "dmy_check_in": "01/09/2016",
+      "dmy_check_out": "03/09/2016",
+      "total_results": 0,
+      "min_price": null,
+      "last_provider": null,
+      "max_provider": 2,
+      "status": null,
+      "wait_time": -119
+    },
+    "room_rate": {
+      "table": {
+        "id": "193-1",
+        "price_str": "19",
+        "currency_code": "USD",
+        "currency_sym": "US$",
+        "provider_name": "Expedia.co.th",
+        "provider_code": "expedia.co.th",
+        "mobile_friendly": true,
+        "ex_tax": false,
+        "is_direct": false,
+        "description": "Junior Room Double - Room Only - Non Refundable - Save 63% - NON REFUNDABLE",
+        "phones": null,
+        "amenities": [],
+        "room_left": null
+      },
+      "modifiable": true
+    }
+  }
+}

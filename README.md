@@ -105,6 +105,16 @@ DiscountNetwork::Result.where(
 )
 ```
 
+#### Retrieve a hotel details
+
+Retrieve the hotel details for a specific search
+
+```ruby
+DiscountNetwork::Result.find_by(
+  search_id: search_id, hotel_id: hotel_id
+)
+```
+
 ## Development
 
 We are following Sandi Metz's Rules for this gem, you can read the
