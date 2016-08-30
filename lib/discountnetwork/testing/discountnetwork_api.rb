@@ -62,7 +62,29 @@ module DiscountNetworkApi
     )
   end
 
+  def stub_search_booking_create_api(booking_params)
+    stub_api_response(
+      :post,
+      "bookings",
+      data: { booking: build_booking_data(booking_params) },
+      filename: "booking_created",
+      status: 200
+    )
+  end
+
   private
+
+  def build_booking_data(booking_params)
+    {
+      search_id: booking_params[:search_id].to_s,
+      travellers_attributes: [booking_params[:travellers]],
+      properties_attributes: [
+        booking_params[:properties].merge(
+          property_id: booking_params[:hotel_id].to_s
+        )
+      ]
+    }
+  end
 
   def api_end_point(end_point)
     [DiscountNetwork.configuration.api_host, end_point].join("/")

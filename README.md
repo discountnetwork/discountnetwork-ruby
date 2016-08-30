@@ -115,6 +115,58 @@ DiscountNetwork::Result.find_by(
 )
 ```
 
+### Booking
+
+#### Creating a new booking
+
+Submit a new booking request for a specific hotel using the API.
+
+```ruby
+# Creating a new booking request for a specific hotel, Pay close
+# attention to the construction of the booking object
+#
+# If you want to add multiple travellers in one booking then
+# pass an Array for travellers as
+# `travellers: [traveller_one_attributes, traveller_two_attributes]`
+#
+# If you need to add multiple properties in one request, like one
+# hotel and a condo in one booking request, then pass an Array as
+#`properties: [property_one_attributes, property_two_attributes]`
+
+DiscountNetwork::Booking.create(
+  hotel_id: "hotel_id",
+  search_id: "search_id",
+  travellers: traveller_attributes,
+  properties: property_attributes
+)
+
+# Traveller attributes
+
+traveller_attributes = {
+  first_name: "John",
+  last_name: "Doe",
+  phone: "012 345 6789",
+  email: "john.doe@example.com",
+  address: "123 Main Street",
+  city: "New York",
+  state: "New York",
+  zip: "NY10310"
+}
+
+# Property attributes
+
+property_attributes = {
+  property_id: "property_101",
+  provider_name: "Booking.com",
+  name: "Nasa Vagas, Thailand",
+  price: "100.99",
+  description: "Description",
+  review_score: "90",
+  total_reviews: "10000",
+  currency_code: "USD"
+}
+```
+
 ## Development
 
 We are following Sandi Metz's Rules for this gem, you can read the
