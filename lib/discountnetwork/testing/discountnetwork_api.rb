@@ -74,16 +74,14 @@ module DiscountNetworkApi
 
   private
 
-  def build_booking_data(booking_params)
-    {
-      search_id: booking_params[:search_id].to_s,
-      travellers_attributes: [booking_params[:travellers]],
+  def build_booking_data(search_id:, hotel_id:, travellers:, properties:, **opt)
+    opt.merge(
+      search_id: search_id.to_s,
+      travellers_attributes: [travellers],
       properties_attributes: [
-        booking_params[:properties].merge(
-          property_id: booking_params[:hotel_id].to_s
-        )
+        properties.merge(property_id: hotel_id.to_s)
       ]
-    }
+    )
   end
 
   def api_end_point(end_point)

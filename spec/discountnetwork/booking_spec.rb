@@ -24,7 +24,8 @@ describe DiscountNetwork::Booking do
       search_id: search_id,
       hotel_id: hotel_id,
       travellers: traveller_attributes,
-      properties: property_attributes
+      properties: property_attributes,
+      note: "This is a special requets"
     }
   end
 
