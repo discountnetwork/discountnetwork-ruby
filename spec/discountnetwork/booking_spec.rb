@@ -19,6 +19,19 @@ describe DiscountNetwork::Booking do
     end
   end
 
+  describe ".find" do
+    it "finds the booking details" do
+      booking_id = 123_456_789
+      stub_booking_find_api(booking_id)
+      booking = DiscountNetwork::Booking.find(booking_id)
+
+      expect(booking.id).to eq(booking_id)
+      expect(booking.travel_criteria).not_to be_nil
+      expect(booking.travellers.first).not_to be_nil
+      expect(booking.properties.first).not_to be_nil
+    end
+  end
+
   def build_booking_attributes(search_id, hotel_id)
     {
       search_id: search_id,

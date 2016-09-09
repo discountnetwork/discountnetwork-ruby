@@ -167,6 +167,15 @@ property_attributes = {
 }
 ```
 
+### Find a booking
+
+To find the details for a specific booking request, including the confirmation
+number, use
+
+```ruby
+DiscountNetwork::Booking.find(booking_id)
+```
+
 ## Development
 
 We are following Sandi Metz's Rules for this gem, you can read the

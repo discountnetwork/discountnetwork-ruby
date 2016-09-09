@@ -67,7 +67,16 @@ module DiscountNetworkApi
       :post,
       "bookings",
       data: { booking: build_booking_data(booking_params) },
-      filename: "booking_created",
+      filename: "booking",
+      status: 200
+    )
+  end
+
+  def stub_booking_find_api(booking_id)
+    stub_api_response(
+      :get,
+      ["bookings", booking_id].join("/"),
+      filename: "booking",
       status: 200
     )
   end
