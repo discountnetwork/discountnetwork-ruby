@@ -81,6 +81,16 @@ module DiscountNetworkApi
     )
   end
 
+  def stub_account_find_api(auth_token)
+    DiscountNetwork.configuration.auth_token = auth_token
+    stub_api_response(
+      :get,
+      "account",
+      filename: "user",
+      status: 200,
+    )
+  end
+
   private
 
   def build_booking_data(search_id:, hotel_id:, travellers:, properties:, **opt)

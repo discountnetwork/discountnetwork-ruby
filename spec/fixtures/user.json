@@ -1,0 +1,31 @@
+{
+  "user": {
+    "first_name": "Abu",
+    "middle_name": "",
+    "last_name": "Nashir",
+    "spouse_name": "",
+    "company_name": "Impact Services Co Ltd",
+    "company_abbr": "IS",
+    "package_name": null,
+    "access_id": null,
+    "username": "username",
+    "sex": "male",
+    "address": "PG Rama 9 Condominium, Rama 9 Road",
+    "city": "Huai Khwang",
+    "state": "Bangkok",
+    "zip": "10310",
+    "country": "TH",
+    "email": "abunashir@gmail.com",
+    "phone": "123 456 7890",
+    "status": "Active",
+    "mobile": "123 456 7890",
+    "office_phone": "",
+    "expiration": null,
+    "created_at": "22 May, 2014",
+    "role": 501,
+    "subscription_status": "active",
+    "name": "Abu  Nashir",
+    "id": 1,
+    "token": "ABCD_123"
+  }
+}
