@@ -7,7 +7,7 @@ describe DiscountNetwork::Account do
       stub_account_find_api(auth_token)
       set_account_auth_token(auth_token)
 
-      account = DiscountNetwork::Account.find
+      account = DiscountNetwork::Account.find(auth_token)
       set_account_auth_token(nil)
 
       expect(account.name).not_to be_nil

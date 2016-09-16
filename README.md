@@ -57,18 +57,16 @@ DiscountNetwork::Session.create(
 
 #### Find user account
 
-Once you have created a new session and store the token as `auth_token`
-configuration then you can retrieve the user account details as
+To retrieve the user account details using the Discount Network `account` API
 
 ```ruby
 #
-# It expectes you to set up the `auth_token` configuration
-# before requesting the user account API. If you have not
-# set up the the `auth_token` yet then you can use
+# The `auth_token` is optional, if you don't pass any
+# parameter then it will try to retrieve the subscriber
+# using the `auth_token` configuration.
 #
-# `DiscountNetwork.configuration.auth_token = session_token
 
-DiscountNetwork::Account.find
+DiscountNetwork::Account.find(auth_token)
 ```
 
 ### Destination
