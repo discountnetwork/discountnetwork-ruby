@@ -91,6 +91,16 @@ module DiscountNetworkApi
     )
   end
 
+  def stub_unauthorized_dn_api_reqeust(end_point)
+    stub_request(:any, api_end_point(end_point)).
+      to_return(status: 401, body: "")
+  end
+
+  def stub_unprocessable_dn_api_request(end_point)
+    stub_request(:any, api_end_point(end_point)).
+      to_return(status: 422, body: "")
+  end
+
   private
 
   def build_booking_data(search_id:, hotel_id:, travellers:, properties:, **opt)
