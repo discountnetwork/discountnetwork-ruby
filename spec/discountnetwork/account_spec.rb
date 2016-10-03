@@ -16,6 +16,20 @@ describe DiscountNetwork::Account do
     end
   end
 
+  describe ".update" do
+    it "updates the subscriber account" do
+      auth_token = "ABCD_123"
+      set_account_auth_token(auth_token)
+      new_attributes = { first_name: "John", last_name: "Doe" }
+
+      stub_account_update_api(auth_token, new_attributes)
+      account = DiscountNetwork::Account.update(new_attributes)
+
+      expect(account).not_to be_nil
+      expect(account.class).to eq(DiscountNetwork::ResponseObject)
+    end
+  end
+
   def set_account_auth_token(token)
     DiscountNetwork.configuration.auth_token = token
   end

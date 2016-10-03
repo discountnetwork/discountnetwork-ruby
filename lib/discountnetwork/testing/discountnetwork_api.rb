@@ -91,6 +91,17 @@ module DiscountNetworkApi
     )
   end
 
+  def stub_account_update_api(auth_token, attributes)
+    DiscountNetwork.configuration.auth_token = auth_token
+    stub_api_response(
+      :put,
+      "account",
+      data: { subscriber: attributes },
+      filename: "empty",
+      status: 204,
+    )
+  end
+
   def stub_unauthorized_dn_api_reqeust(end_point)
     stub_request(:any, api_end_point(end_point)).
       to_return(status: 401, body: "")

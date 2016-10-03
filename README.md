@@ -69,6 +69,15 @@ To retrieve the user account details using the Discount Network `account` API
 DiscountNetwork::Account.find(auth_token)
 ```
 
+#### Update user account
+
+Once the user is logged in and `auth_token` has been configured properly then
+we can update the user details using the DiscountNetwork `account` API
+
+```ruby
+DiscountNetwork::Account.update(subscriber_attributes)
+```
+
 ### Destination
 
 #### List destinations
