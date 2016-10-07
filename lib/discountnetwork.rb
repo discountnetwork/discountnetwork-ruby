@@ -6,6 +6,7 @@ require "discountnetwork/account"
 require "discountnetwork/search"
 require "discountnetwork/result"
 require "discountnetwork/booking"
+require "discountnetwork/activation"
 require "discountnetwork/destination"
 
 module DiscountNetwork

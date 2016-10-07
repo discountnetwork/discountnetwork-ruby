@@ -78,6 +78,17 @@ we can update the user details using the DiscountNetwork `account` API
 DiscountNetwork::Account.update(subscriber_attributes)
 ```
 
+### Activation
+
+#### Find a subscriber
+
+The `activation` offers an easier way to find the subscriber details based on
+the `activation_token`. To find a `subscriber` use
+
+```ruby
+DiscountNetwork::Activation.find(activation_token)
+```
+
 ### Destination
 
 #### List destinations
