@@ -111,6 +111,16 @@ module DiscountNetworkApi
     )
   end
 
+  def stub_activation_activate_api(token, attributes)
+    stub_api_response(
+      :put,
+      ["account", "activation", token].join("/"),
+      data: { user: attributes },
+      filename: "user",
+      status: 200,
+    )
+  end
+
   def stub_unauthorized_dn_api_reqeust(end_point)
     stub_request(:any, api_end_point(end_point)).
       to_return(status: 401, body: "")

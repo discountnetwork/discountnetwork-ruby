@@ -89,6 +89,19 @@ the `activation_token`. To find a `subscriber` use
 DiscountNetwork::Activation.find(activation_token)
 ```
 
+#### Activate a subscriber
+
+Once subscriber has provided their required information then we can activate
+their account using the `Activation` API. The API already has validations in
+place but it would be easier to implement some validation before sending any
+activation API request.
+
+```ruby
+DiscountNetwork::Activation.activate(
+  activation_token, subscriber_attributes
+)
+```
+
 ### Destination
 
 #### List destinations
