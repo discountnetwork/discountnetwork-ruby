@@ -102,6 +102,17 @@ DiscountNetwork::Activation.activate(
 )
 ```
 
+### Password
+
+#### Forgot password
+
+If the subscriber forgot their password then developer can allow them to reset
+their password using the Discount network API.
+
+```ruby
+DiscountNetwork::Password.forgot(email_address)
+```
+
 ### Destination
 
 #### List destinations

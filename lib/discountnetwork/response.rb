@@ -10,6 +10,8 @@ module DiscountNetwork
 
     def parse
       JSON.parse(response, object_class: ResponseObject)
+    rescue JSON::ParserError => error
+      ResponseObject.new(error: error, content: "")
     end
   end
 
