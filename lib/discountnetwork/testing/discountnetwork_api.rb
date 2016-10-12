@@ -141,6 +141,15 @@ module DiscountNetworkApi
     )
   end
 
+  def stub_password_validate_api(token)
+    stub_api_response(
+      :get,
+      ["account", "resets", token].join("/"),
+      filename: "empty",
+      status: 204,
+    )
+  end
+
   def stub_unauthorized_dn_api_reqeust(end_point)
     stub_request(:any, api_end_point(end_point)).
       to_return(status: 401, body: "")

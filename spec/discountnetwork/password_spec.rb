@@ -27,4 +27,15 @@ describe DiscountNetwork::Password do
       expect(password.class).to eq(DiscountNetwork::ResponseObject)
     end
   end
+
+  describe ".validate" do
+    it "valides the password reset token" do
+      token = "ABCD_123"
+      stub_password_validate_api(token)
+      password = DiscountNetwork::Password.validate(token)
+
+      expect(password).not_to be_nil
+      expect(password.class).to eq(DiscountNetwork::ResponseObject)
+    end
+  end
 end

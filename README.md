@@ -113,6 +113,16 @@ their password using the Discount network API.
 DiscountNetwork::Password.forgot(email_address)
 ```
 
+#### Validate reset token
+
+Before allowing subscriber to reset their password, developer can validate if
+the reset token is valid or not as expired or invalid reset token won't allow
+subscriber to reset their password.
+
+```ruby
+DiscountNetwork::Password.validate(reset_token)
+```
+
 #### Set new password
 
 Once subscriber has submitted a valid reset request and followed the instruction

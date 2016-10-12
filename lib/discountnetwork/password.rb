@@ -6,6 +6,12 @@ module DiscountNetwork
       )
     end
 
+    def validate(token)
+      DiscountNetwork.get_resource(
+        ["account", "resets", token].join("/"),
+      )
+    end
+
     def create(token, attributes)
       DiscountNetwork.put_resource(
         ["account", "passwords", token].join("/"), account: attributes
