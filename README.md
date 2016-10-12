@@ -113,6 +113,15 @@ their password using the Discount network API.
 DiscountNetwork::Password.forgot(email_address)
 ```
 
+#### Set new password
+
+Once subscriber has submitted a valid reset request and followed the instruction
+then we can allow them to set their password as follow
+
+```ruby
+DiscountNetwork::Password.create(reset_token, password_attributes)
+```
+
 ### Destination
 
 #### List destinations

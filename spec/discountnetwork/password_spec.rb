@@ -11,4 +11,20 @@ describe DiscountNetwork::Password do
       expect(password.class).to eq(DiscountNetwork::ResponseObject)
     end
   end
+
+  describe ".create" do
+    it "creates a new password" do
+      token = "ABCD_123"
+      password_attributes = {
+        password: "secret_password",
+        password_confirmation: "secret_password",
+      }
+
+      stub_password_create_api(token, password_attributes)
+      password = DiscountNetwork::Password.create(token, password_attributes)
+
+      expect(password).not_to be_nil
+      expect(password.class).to eq(DiscountNetwork::ResponseObject)
+    end
+  end
 end
