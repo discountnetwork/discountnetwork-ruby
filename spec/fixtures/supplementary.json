@@ -1,0 +1,21 @@
+{
+  "id": 1234,
+  "company_id": 101,
+  "first_name": "John",
+  "middle_name": null,
+  "last_name": "Doe",
+  "sex": null,
+  "dob": null,
+  "country": null,
+  "role": 123,
+  "email": "john.doe@example.com",
+  "phone": "+1 123 456 789 0123",
+  "username": null,
+  "status": null,
+  "activation_token": "token_123_abcd",
+  "parent_id": 1,
+  "access_kit_id": null,
+  "note": null,
+  "referral_key": null,
+  "referrer_id": null
+}

@@ -149,6 +149,25 @@ developer can use the `list` interface for supplementary.
 DiscountNetwork::Supplementary.list
 ```
 
+#### Add supplementary
+
+To add a new supplementary subscriber with authenticated subscriber's
+subscription developer can use the `create` interface for supplementary.
+
+```ruby
+DiscountNetwork::Supplementary.create(
+  subscriber_attributes
+)
+
+# subscriber attributes
+subscriber_attributes = {
+  first_name: "John",
+  last_name: "Green",
+  phone: "+1 123 345 5678",
+  email: "john.green@example.com"
+}
+```
+
 ### Destination
 
 #### List destinations
