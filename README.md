@@ -132,6 +132,23 @@ then we can allow them to set their password as follow
 DiscountNetwork::Password.create(reset_token, password_attributes)
 ```
 
+### Supplementary
+
+Each Discount Network subscription comes with varies number of supplementary
+subscribers, that means primary member can add one or more of this friends or
+family member to his subscription. The supplementary API provides an easier
+way to manage the supplementary subscribers. Please note, This interface expects
+that the subscriber has already been authenticated before making any API call.
+
+#### List supplementaries
+
+To list all the supplementary subscribers for the authenticated subscriber
+developer can use the `list` interface for supplementary.
+
+```ruby
+DiscountNetwork::Supplementary.list
+```
+
 ### Destination
 
 #### List destinations

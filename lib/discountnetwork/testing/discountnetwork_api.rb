@@ -150,6 +150,15 @@ module DiscountNetworkApi
     )
   end
 
+  def stub_supplementary_list_api
+    stub_api_response(
+      :get,
+      "supplementaries",
+      filename: "supplementaries",
+      status: 200,
+    )
+  end
+
   def stub_unauthorized_dn_api_reqeust(end_point)
     stub_request(:any, api_end_point(end_point)).
       to_return(status: 401, body: "")

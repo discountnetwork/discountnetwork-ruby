@@ -9,6 +9,7 @@ require "discountnetwork/booking"
 require "discountnetwork/password"
 require "discountnetwork/activation"
 require "discountnetwork/destination"
+require "discountnetwork/supplementary"
 
 module DiscountNetwork
 end
