@@ -1,0 +1,32 @@
+{
+  "providers": [
+    {
+      "name": "Hotel One",
+      "description": "Hotel One is one of the best discount provider on hotel",
+      "image": "hotel-one.jpg",
+      "images": {
+        "original": "https://s3.amazonaws.com/hotel-one.jpg",
+        "standard": "https://s3.amazonaws.com/standard_hotel-one.jpg",
+        "thumb": "https://s3.amazonaws.com/thumb_hotel-one.jpg"
+      },
+      "link": "http://hotel-one.example.com",
+      "slug": "hotel-one",
+      "frameable": true,
+      "postable": false
+    },
+    {
+      "name": "Hotel Two",
+      "description": "Hotel Two is the best discount provider on Asia",
+      "image": "hotel-two.jpg",
+      "images": {
+        "original": "https://s3.amazonaws.com/hotel-two.jpg",
+        "standard": "https://s3.amazonaws.com/standard_hotel-two.jpg",
+        "thumb": "https://s3.amazonaws.com/thumb_hotel-two.jpg"
+      },
+      "link": "http://hotel-two.example.com",
+      "slug": "hotel-two",
+      "frameable": false,
+      "postable": true
+    }
+  ]
+}

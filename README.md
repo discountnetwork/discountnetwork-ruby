@@ -291,6 +291,24 @@ number, use
 DiscountNetwork::Booking.find(booking_id)
 ```
 
+### Providers
+
+Discount Network partnered with multiple vendors to provide the best possible
+price in all sort of travel. This will allow developer to add those public
+provider in their site and let their subscriber search and contact the support
+to receive their subscriber discount.
+
+#### Retrieving providers
+
+This will allow developer to retrieve all of the specified public travel partner
+so they can show them to their site. Note: They `type` is mandatory and
+the supported value for `type` are `hotel`, `cruise`, `resort`, `tour`, `package`
+and `car`.
+
+```ruby
+DiscountNetwork::Provider.where(type: "hotel")
+```
+
 ## Development
 
 We are following Sandi Metz's Rules for this gem, you can read the
