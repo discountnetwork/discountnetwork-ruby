@@ -309,6 +309,16 @@ and `car`.
 DiscountNetwork::Provider.where(type: "hotel")
 ```
 
+### Find a provider
+
+On the provider listing API, one of the most important `attribute` the API
+returns is `slug`, we can use that `slug` to retrieve the details about any
+specific provider.
+
+```ruby
+DiscountNetwork::Provider.find_by_slug(slug)
+```
+
 ## Development
 
 We are following Sandi Metz's Rules for this gem, you can read the

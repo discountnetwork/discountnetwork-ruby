@@ -179,6 +179,15 @@ module DiscountNetworkApi
     )
   end
 
+  def stub_provider_find_by_slug_api(slug)
+    stub_api_response(
+      :get,
+      ["providers", slug].join("/"),
+      filename: "provider",
+      status: 200,
+    )
+  end
+
   def stub_unauthorized_dn_api_reqeust(end_point)
     stub_request(:any, api_end_point(end_point)).
       to_return(status: 401, body: "")

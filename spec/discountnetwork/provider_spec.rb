@@ -12,4 +12,15 @@ describe DiscountNetwork::Provider do
       expect(providers.first.images.thumb).not_to be_nil
     end
   end
+
+  describe ".find_by_slug" do
+    it "retrieves a specific provider by a slug" do
+      provider_slug = "hotel-one"
+      stub_provider_find_by_slug_api(provider_slug)
+      provider = DiscountNetwork::Provider.find_by_slug(provider_slug)
+
+      expect(provider.name).not_to be_nil
+      expect(provider.slug).to eq(provider_slug)
+    end
+  end
 end
