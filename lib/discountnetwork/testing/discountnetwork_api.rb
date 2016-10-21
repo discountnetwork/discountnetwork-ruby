@@ -112,12 +112,8 @@ module DiscountNetworkApi
   end
 
   def stub_activation_activate_api(token, attributes)
-    stub_api_response(
-      :put,
-      ["account", "activation", token].join("/"),
-      data: { user: attributes },
-      filename: "user",
-      status: 200,
+    update_nested_account_resource(
+      "activation", token, "user", user: attributes
     )
   end
 
@@ -132,12 +128,8 @@ module DiscountNetworkApi
   end
 
   def stub_password_create_api(token, attributes)
-    stub_api_response(
-      :put,
-      ["account", "passwords", token].join("/"),
-      data: { account: attributes },
-      filename: "empty",
-      status: 204,
+    update_nested_account_resource(
+      "passwords", token, "empty", account: attributes
     )
   end
 
@@ -207,6 +199,16 @@ module DiscountNetworkApi
       properties_attributes: [
         properties.merge(property_id: hotel_id.to_s)
       ]
+    )
+  end
+
+  def update_nested_account_resource(resource, token, filename, data_hash)
+    stub_api_response(
+      :put,
+      ["account", resource, token].join("/"),
+      data: data_hash,
+      filename: filename,
+      status: 200,
     )
   end
 
