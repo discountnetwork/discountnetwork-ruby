@@ -4,6 +4,8 @@
 Status](https://travis-ci.org/discountnetwork/discountnetwork-ruby.svg?branch=master)](https://travis-ci.org/discountnetwork/discountnetwork-ruby)
 [![Code
 Climate](https://codeclimate.com/github/discountnetwork/discountnetwork-ruby/badges/gpa.svg)](https://codeclimate.com/github/discountnetwork/discountnetwork-ruby)
+[![Gem
+Version](https://badge.fury.io/rb/discountnetwork.svg)](https://badge.fury.io/rb/discountnetwork)
 
 Ruby API client for Discount Network API
 
