@@ -14,7 +14,7 @@ Ruby API client for Discount Network API
 Add this line to your application's Gemfile:
 
 ```ruby
-gem "discountnetwork", github: "discountnetwork/discountnetwork-ruby"
+gem "discountnetwork", "~> 0.1.1"
 ```
 
 And then execute:
