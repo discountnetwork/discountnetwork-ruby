@@ -44,10 +44,11 @@ module DiscountNetworkApi
     )
   end
 
-  def stub_search_results_api(search_id:)
+  def stub_search_results_api(search_id:, **attributes)
     stub_api_response(
       :get,
       ["searches", search_id, "results"].join("/"),
+      data: attributes,
       filename: "results",
       status: 200
     )
