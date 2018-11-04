@@ -71,6 +71,17 @@ To retrieve the user account details using the Discount Network `account` API
 DiscountNetwork::Account.find(auth_token)
 ```
 
+#### Create a user account
+
+To create a new user account you can use the `Account.create` interface, but one
+important things to remember that account creation is not available for all white
+label, so if it's failing then most likely this feature is not supported on your
+white label.
+
+```ruby
+DiscountNetwork::Account.create(subscriber_attributes)
+```
+
 #### Update user account
 
 Once the user is logged in and `auth_token` has been configured properly then

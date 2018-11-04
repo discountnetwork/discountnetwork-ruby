@@ -103,6 +103,15 @@ module DiscountNetworkApi
     )
   end
 
+  def stub_account_create_api(attributes)
+    stub_api_response(
+      :post,
+      "account",
+      data: { subscriber: attributes },
+      filename: "user",
+    )
+  end
+
   def stub_activation_find_api(token)
     stub_api_response(
       :get,

@@ -16,6 +16,17 @@ describe DiscountNetwork::Account do
     end
   end
 
+  describe ".create" do
+    it "creates and returns created user" do
+      stub_account_create_api(user_attributes)
+
+      response = DiscountNetwork::Account.create(user_attributes)
+
+      expect(response.user.name).not_to be_nil
+      expect(response.user.status).to eq("Active")
+    end
+  end
+
   describe ".update" do
     it "updates the subscriber account" do
       auth_token = "ABCD_123"
@@ -32,5 +43,24 @@ describe DiscountNetwork::Account do
 
   def set_account_auth_token(token)
     DiscountNetwork.configuration.auth_token = token
+  end
+
+  def user_attributes
+    @user_attributes ||= {
+      first_name: "John",
+      last_name: "Doe",
+      sex: "Male",
+      address: "123 Main Street",
+      city: "New York",
+      zip: "NY123",
+      state: "New York",
+      phone: "+1 123 456 789 0123",
+      mobile: "+1 012 345 678 9012",
+      username: "john.doe",
+      email: "john.doe@example.com",
+      country: "US",
+      password: "secret_password",
+      password_confirmation: "secret_password",
+    }
   end
 end

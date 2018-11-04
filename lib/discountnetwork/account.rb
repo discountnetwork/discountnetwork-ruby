@@ -7,6 +7,10 @@ module DiscountNetwork
       end
     end
 
+    def create(attributes)
+      DiscountNetwork.post_resource("account", subscriber: attributes)
+    end
+
     def update(attributes)
       if auth_token_exists?
         DiscountNetwork.put_resource("account", subscriber: attributes)
