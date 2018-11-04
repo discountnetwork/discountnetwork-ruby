@@ -1,3 +1,3 @@
 module Discountnetwork
-  VERSION = "0.1.2".freeze
+  VERSION = "0.1.3".freeze
 end
